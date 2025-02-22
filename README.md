@@ -1,4 +1,4 @@
-# Image Of The Day (API)
+# Image Of The Day (API) (RUN THIS LOCALLY)
 #### using Nasa's image of the day API
 ## Author
 
@@ -7,7 +7,7 @@
 
 ## Deployment
 
-To open this project, click [here.](https://cometcoder192.github.io/NASA-ImageOfTheDay/)
+~~To open this project, click [here.](https://cometcoder192.github.io/NASA-ImageOfTheDay/)~~
 
 ```bash
   ==> https://cometcoder192.github.io/NASA-ImageOfTheDay/
