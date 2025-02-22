@@ -7,18 +7,32 @@ btn.addEventListener('click', function() {
 	btn.classList.add('redText')
 })
 
-
+/*
 async function sendApiReq() {
-  let API_KEY = 'RRkXY9fc134i4zTg1S9UzzkN9LTg3qdQnKBtB2Oi'
   let response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`);
   console.log(response);
   let data = await response.json();
   console.log(data);
   useApiData(data)
 }
+*/
+
+function sendApiReq() {
+  fetch(`http://localhost:3000/config`)
+  .then(response => response.json())
+  .then(data => {
+      fetch(`${data.URL}`)
+        .then(res => res.json())
+        .then(info => {
+          console.log(info);
+          useApiData(info);
+    })
+  })
+}
 
 function useApiData(data) {
   document.querySelector('#info').innerHTML += `<img alt="img" src="${data.url}"><br>`;
   document.querySelector('#info').innerHTML += data.title;
+  document.querySelector('#explanation').innerHTML += data.explanation;
 
 }
